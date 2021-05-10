@@ -1,0 +1,14 @@
+.greet-div-top{
+    border-style: solid;
+    border-color: slategray;
+    border-width: 2px;    
+    border-radius: 2px 2px 2px 2px;
+    margin: 2em 2em ;
+    padding: 2em 2em;
+}
+
+
+
+.head{
+    text-align: center;
+}
