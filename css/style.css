@@ -1,4 +1,14 @@
-.greet-div-top{
+.greet-header, .greet-div-top{
+    border-style: solid;
+    border-color: slategray;
+    border-width: 2px;    
+    border-radius: 2px 2px 2px 2px;
+    margin: 2em 2em ;
+    padding: 2em 2em;
+    display: flex;
+    flex-flow: row;
+}
+.radio-greet-btn{
     border-style: solid;
     border-color: slategray;
     border-width: 2px;    
@@ -9,10 +19,55 @@
     flex-flow: row;
 }
 
+.greetCtrl{
+    float: right;
+}
+.enter-name-field{
+    height: 20px;
+}
 
 
 .head{
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.span-name{
+    display: flex;
+    flex-flow: row;
+}
+.output_div{
+    border-style: solid;
+    border-color: slategray;
+    border-width: 2px;    
+    border-radius: 2px 2px 2px 2px;
+    margin: 2em 2em ;
+    padding: 2em 2em;
+}
+body{
+    margin: 2em 2em 2em 2em;
+    padding: 1em 1em 1em 1em;
+}
+
+@media only screen and (max-width :555px){
+.greet-div-top{
+    display: flex;
+    flex-flow: column;
+}
+.radio-greet-btn{
+    display: flex;
+    flex-flow: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 2em 2em ;
+    padding: 2em 2em;
+}
+.label ,.button{
+    margin-left: auto;
+    margin-right: auto;
+}
+    
 }
 
 
