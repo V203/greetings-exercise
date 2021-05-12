@@ -28,6 +28,17 @@ function chkNames(){
     }
 }
 
+function antiEmpty(par){
+    if(par === ""){
+       return output.innerHTML ="please enter your name please";
+
+    }
+   else if((par == /[0-9]/g)){
+        alert("cant enter nums");
+    }
+
+}
+
 function getGreetCtr(){
     return grtCounter
 }
@@ -37,7 +48,8 @@ return{
 setName,
 action,
 chkNames,
-getGreetCtr
+getGreetCtr,
+antiEmpty
 
 }
 }

@@ -3,7 +3,7 @@
     border-color: slategray;
     border-width: 2px;    
     border-radius: 2px 2px 2px 2px;
-    margin: 2em 2em ;
+    margin: 20px 20% ;
     padding: 2em 2em;
     display: flex;
     flex-flow: row;
@@ -13,7 +13,7 @@
     border-color: slategray;
     border-width: 2px;    
     border-radius: 2px 2px 2px 2px;
-    margin: 2em 2em ;
+    margin: 20px 20% ;
     padding: 2em 2em;
     display: flex;
     flex-flow: row;
@@ -45,7 +45,7 @@
     border-color: slategray;
     border-width: 2px;    
     border-radius: 2px 2px 2px 2px;
-    margin: 2em 2em ;
+    margin:  20px 20% ;
     padding: 2em 2em;
 }
 body{
