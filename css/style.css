@@ -19,8 +19,18 @@
     flex-flow: row;
 }
 
+h1,h4{
+    font-family: fantasy;
+}
+.counter_label{
+    display: flex;
+    flex-flow: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .greetCtrl{
-    float: right;
+    display: flex;
 }
 .enter-name-field{
     margin-top: 19px;
@@ -63,7 +73,7 @@ label{
     margin: 1em 1em;
 }
 
-@media only screen and (max-width :668px){
+@media only screen and (max-width :828px){
 .greet-div-top{
     display: flex;
     flex-flow: column;

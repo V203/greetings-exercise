@@ -15,8 +15,11 @@ var output = document.querySelector(".output_div");
 greetbtn.addEventListener("click",function(){
     var _grt = grt();
     var rdioVal = document.querySelector(".rdio:checked");
+    _grt.antiDigit()
     _grt.antiEmpty(nameFld.value);
     _grt.setName(nameFld.value)
+    
+    
     _grt.chkNames()
     // alert(_grt.action(rdioVal.value))
     counter_div.innerHTML = _grt.getGreetCtr();
