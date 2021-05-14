@@ -8,8 +8,6 @@ var counter_div = document.querySelector(".counter_div");
 var greetbtn =  document.querySelector(".greetBtn");
 var output_div = document.querySelector(".output_div");
 
-// var greetingscounter_div = 0;
-
 var _grt = grt();
 
 greetbtn.addEventListener("click",function(){
@@ -19,13 +17,19 @@ greetbtn.addEventListener("click",function(){
     _grt.chkNames(nameFld.value)
     _grt.antiDigit(nameFld.value)
     _grt.antiEmpty(nameFld.value);
-    
-    
-    
-    
-    // alert(_grt.greeted())
-    counter_div.innerHTML = _grt.getGreetCtr();
-    output.innerHTML = _grt.action(rdioVal.value)
+     
+    localStorage =_grt.getGreetCtr();
+   
+
+    counter_div.innerHTML = localStorage.length;
+    console.log(localStorage.length)
+    output_div.innerHTML = _grt.action(rdioVal.value)
+    if(localStorage["counter"]){
+        counter = localStorage["counter"]
+        counter_div.innerHTML=counter
+
+
+    }
 })
 
 

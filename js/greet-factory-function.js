@@ -2,7 +2,7 @@ function grt() {
     var grtName;
     var namesGreeted = {}
     var grtCounter = 0;
-
+    
     function setName(_name) {
         grtName = _name;
     }
@@ -36,7 +36,7 @@ function grt() {
     function antiEmpty(par) {
         if (par === "") {
             alert("please enter your name please");
-             output.innerHTML = "please enter your name please"
+             output_div.innerHTML = "please enter your name please"
         }
 
     }
@@ -62,7 +62,7 @@ function grt() {
         return namesGreeted.size
     }
 
-
+    console.log(namesGreeted);
     return {
         setName,
         action,
