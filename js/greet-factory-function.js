@@ -27,6 +27,8 @@ function grt() {
         if (namesGreeted[grtName] === undefined) {
             grtCounter++
             namesGreeted[grtName] = 0;
+            
+            
 
         }
         
@@ -59,10 +61,10 @@ function grt() {
     }
 
     function greeted(){
-        return namesGreeted.size
+        return namesGreeted
     }
 
-    console.log(namesGreeted);
+  
     return {
         setName,
         action,
