@@ -20,20 +20,32 @@
     <div class="greet-div-top">
         <div class="center">
             <span class="span-name">
-                <h2>
+                <h4>
                     Name:
-                </h2>
+                </h4>
 
             </span>
-            <input class="enter-name-field" type="text" name="enter-name" id="">
+            <input class="enter-name-field" type="text" name="enter-name" id="" placeholder="Enter your name">
 
-            <span>
-                <h1 class="counter_div">
-                    0
-                </h1>
-            </span>
+
         </div>
+        <div class="counter_lbl">
+            <span class="counter_label">
+                <h4>
+                    counter:
+                </h4>
+                <h4 class="counter_div">
+                    0
+                </h4>
+            </span>
+
+        </div>
+
+
+
     </div>
+
+
 
     <div class="radio-greet-btn">
         <div class="center">
@@ -55,29 +67,38 @@
                     Latin
                 </span>
             </label>
-
-            <div class="greetCtrl">
-                <button class="greetBtn">
-                    Greet me
-                </button>
-            </div>
             
+            <div>
+                <div class="greetCtrl">
+                    <button class="greetBtn">
+                        Greet me
+                    </button>
+
+                    <div class="resetBtn">
+                        <button class="reset">
+                            reset me
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
+    </div>
+
+    <div class="output_div">
+        <div class="center"></div>
 
     </div>
-    
-        <div class="output_div">
-            <div class="center"></div>
-
-        </div>
     </div>
 
 
+    <script src="./js/greet-factory-function.js"></script>
+    <script src="./js/javascript.js"></script>
+    <script src="./greet-test/greet.test.js"></script>
     
-
 
 </body>
-<script src="./js/javascript.js"></script>
-<script src="./js/greet-factory-function.js"></script>
+
 
 </html>
