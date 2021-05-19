@@ -22,7 +22,7 @@ greetbtn.addEventListener("click", function () {
     // _grt.chkNames(nameFld.value)
     // counter++
     // localStorage["counter"] = counter
-    alert(nameFld.value)
+    
     if (namesGreeted[nameFld.value] === undefined) {
         counter++
         namesGreeted[nameFld.value] = 0;
