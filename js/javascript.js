@@ -15,14 +15,14 @@ var lstBtn = document.querySelector(".listBtn")
 
 
 if (localStorage["counter"]) {
-    counter = Number(localStorage["counter"])
-    counter_div.innerHTML = counter
+    counter = JSON.parse(localStorage["counter"])
+    counter_div.innerHTML = counter.length
 }
 var _grt = grt();
 
 greetbtn.addEventListener("click", function () {
     
-    alert(_grt.greeted())
+    
     if (namesGreeted[nameFld.value] === undefined ) {
         counter++
         namesGreeted[nameFld.value] = 0;
@@ -57,14 +57,14 @@ clearBtn.addEventListener("click", function () {
     // localStorage.clear()
 
     localStorage.clear()
-    counter = 0
-    counter_div.innerHTML = counter
+    
+    counter_div.innerHTML = Object.keys(counter).length
 })
 
 lstBtn.addEventListener("click",function(){
-    var obs=JSON.parse(namesGreeted);
-    for(var i in obs){
-        console.log(namesGreeted)
+    
+    for(var i in localStorage){
+        alert(Object.keys(localStorage.getItem(i)))
      
     }
 
