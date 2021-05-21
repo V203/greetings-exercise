@@ -1,17 +1,12 @@
-function grt() {
-    var grtName;
-    var namesGreeted = {}
-    var grtCounter = 0;
+function grt(existingNames) {
 
-    function setName(_name) {
-        if (_name !== "" && _name !== /[0-9]/) {
-            grtName = _name;
+    var namesGreeted = existingNames || {}
+  //  var grtCounter = 0;
 
-        }
 
-    }
 
-    function action(checked) {
+    function action(checked,grtName_) {
+        grtName = grtName_.charAt(0).toUpperCase() + grtName_.slice(1);
 
         if (checked === "japanese") {
             return "Konnichiwa, " + grtName;
@@ -22,20 +17,16 @@ function grt() {
         else if (checked === "latin") {
             return "Salve, " + grtName
         }
-
+        
     }
 
-    function chkNames(grtName) {
+    function setNames(name) {
+        
 
-        if (namesGreeted[grtName] === undefined) {
-            grtCounter++
-            namesGreeted[grtName] = 0;
-
-
+        if (namesGreeted[name] === undefined) {
+            namesGreeted[name] = 0;
 
         }
-
-
     }
 
     function antiEmpty(par) {
@@ -48,36 +39,38 @@ function grt() {
     function antiDigit(par) {
         var para = /[0-9]/;
         if (par.match(para)) {
-            return alert("nums not needed")
+            return par
         }
 
 
     }
 
     function getGreetCtr() {
-        return grtCounter
+       
+        return Object.keys(namesGreeted).length
     }
 
-    function getName() {
-        return grtName
-    }
+    // function getName() {
+    //     return grtName
+    // }
 
     function greeted() {
+        console.log(namesGreeted + "xcvbnjkl;")
         return namesGreeted
     }
 
     function cleanName(par_) {
-        par_
+        
 
     }
 
 
+
+
     return {
-        setName,
+        setNames,
         action,
-        chkNames,
         getGreetCtr,
-        getName,
         greeted,
         antiEmpty,
         antiDigit,

@@ -1,8 +1,3 @@
-var namesGreeted = {};
-var userName;
-var greetingscounter_div = 0;
-var counter = 0;
-
 var nameFld = document.querySelector(".enter-name-field");
 var counter_div = document.querySelector(".counter_div");
 var greetbtn = document.querySelector(".greetBtn");
@@ -11,66 +6,62 @@ var clearBtn = document.querySelector(".resetBtn")
 var lstBtn = document.querySelector(".listBtn")
 
 
+var namesGreeted;
 
 
 
-if (localStorage["counter"]) {
-    counter = JSON.parse(localStorage["counter"])
-    counter_div.innerHTML = counter.length
+if (localStorage["names"]) {
+    namesGreeted = JSON.parse(localStorage["names"])
+
 }
-var _grt = grt();
+var _grt = grt(namesGreeted);
+
+
+counter_div.innerHTML = _grt.getGreetCtr()
 
 greetbtn.addEventListener("click", function () {
-    
-    
-    if (namesGreeted[nameFld.value] === undefined ) {
-        counter++
-        namesGreeted[nameFld.value] = 0;
-        localStorage["counter"] = counter
-        
 
-    }
-    // else if(namesGreeted[nameFld.value] == ""){
-    //    return output_div.innerHTML= "Please enter Name in the text field.."
-    // }
+
 
     var rdioVal = document.querySelector(".rdio:checked");
-    _grt.setName(nameFld.value)
-    _grt.getName();
-
-    _grt.antiDigit(nameFld.value)
-    _grt.antiEmpty(nameFld.value);
-
-    // localStorage =_grt.getGreetCtr();
+    if (!_grt.antiDigit(nameFld.value)) {
 
 
-    counter_div.innerHTML = localStorage.length;
-    
-    output_div.innerHTML = _grt.action(rdioVal.value)
-    counter_div.innerHTML = counter
+        if (nameFld.value === "") {
+            output_div.innerHTML = "Please enter your name in the textbox field."
+        } else {
+            _grt.setNames(nameFld.value)
+            output_div.innerHTML = _grt.action(rdioVal.value, nameFld.value)
+
+        }
+    }else{
+        output_div.innerHTML = "Please enter your name in the text field."
+    }
+
+
+    localStorage.setItem("names", JSON.stringify(_grt.greeted()));
+
+
+    counter_div.innerHTML = _grt.getGreetCtr()
     // alert(localStorage["name"])
 
 
 })
 
 clearBtn.addEventListener("click", function () {
-    // localStorage.clear()
+    
 
     localStorage.clear()
+
     
-    counter_div.innerHTML = Object.keys(counter).length
+    location.reload()
 })
 
-lstBtn.addEventListener("click",function(){
-    
-    for(var i in localStorage){
-        alert(Object.key(localStorage.getItem(i)))
-     
-    }
+lstBtn.addEventListener("click", function () {
 
 })
 
 
 
 
-console.log(namesGreeted["counter"])
+
