@@ -64,7 +64,7 @@ clearBtn.addEventListener("click", function () {
 lstBtn.addEventListener("click",function(){
     
     for(var i in localStorage){
-        alert(Object.keys(localStorage.getItem(i)))
+        alert(Object.key(localStorage.getItem(i)))
      
     }
 
