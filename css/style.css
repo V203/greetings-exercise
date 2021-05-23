@@ -1,9 +1,9 @@
 .greet-header, .greet-div-top{
     border-style: solid;
     border-color: slategray;
-    border-width: 2px;    
+    border-width: 4px;    
     border-radius: 2px 2px 2px 2px;
-    margin: 20px 20% ;
+    margin: 30px 30px ;
     padding: 2em 2em;
     display: flex;
     flex-flow: row;
@@ -11,30 +11,35 @@
 .radio-greet-btn{
     border-style: solid;
     border-color: slategray;
-    border-width: 2px;    
+    border-width: 4px;       
     border-radius: 2px 2px 2px 2px;
-    margin: 20px 20% ;
+    margin: 30px 30px ;
     padding: 2em 2em;
     display: flex;
     flex-flow: row;
 }
 
+
 h1,h4{
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* text-align: center; */
+
 }
 .counter_label{
+    border-width: 4px;    
     display: flex;
     flex-flow: row;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 7px;
+    margin-right: 100;
 }
 
 .greetCtrl{
+    border-width: 4px;    
     display: flex;
 }
 .enter-name-field{
     margin-top: 19px;
-    height: 20px;
+    height: auto;
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -53,16 +58,19 @@ h1,h4{
 .output_div{
     border-style: solid;
     border-color: slategray;
-    border-width: 2px;    
-    border-radius: 2px 2px 2px 2px;
-    margin:  20px 20% ;
+    border-width: 4px;    
+    border-radius: 5px 5px 5px 5px;
+    margin:  30px 30px ;
     padding: 2em 2em;
 }
 body{
-    margin: 2em 2em 2em 2em;
+    box-shadow: 5px 5px 4px 4px lightslategray;
+    margin: 2em 1em 2em 1em;
     padding: 1em 1em 1em 1em;
+    border-radius: 19px 19px 19px 19px;
 }
 .center{
+    
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -73,26 +81,43 @@ label{
     margin: 1em 1em;
 }
 
+.center-b{
+    display: flex;
+    
+}
+
+
 @media only screen and (max-width :828px){
 .greet-div-top{
     display: flex;
     flex-flow: column;
+    
 }
 .radio-greet-btn{
     display: flex;
     flex-flow: column;
-    margin-left: auto;
-    margin-right: auto;
-    margin: 2em 2em ;
-    padding: 2em 2em;
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* margin: 2em 2em ;
+    padding: 2em 2em; */
 }
-.label ,.button{
-    margin-left: auto;
-    margin-right: auto;
+.label ,.button ,.counter_label{
+    margin-left: 84px;
+    margin-right: 26px;
 }
 .center{
     display: flex;
     flex-flow: column;
+}
+
+.center-b{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.span-name{
+    margin-left: auto;
+    margin-right: auto;
 }
     
 }

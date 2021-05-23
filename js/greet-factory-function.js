@@ -1,79 +1,84 @@
-function grt() {
-    var grtName;
-    var namesGreeted = {}
-    var grtCounter = 0;
-    
-    function setName(_name) {
-        grtName = _name;
-    }
+function grt(existingNames) {
 
-    function action(checked) {
+    var namesGreeted = existingNames || {}
+  //  var grtCounter = 0;
+
+
+
+    function action(checked,grtName_) {
+      let  grtName = grtName_.charAt(0).toUpperCase() + grtName_.slice(1);
 
         if (checked === "japanese") {
-            return "Konnichiwa ," + grtName;
+            return "Konnichiwa, " + grtName;
         }
         else if (checked === "venda") {
-            return "Ndaa ," + grtName
+            return "Ndaa, " + grtName
         }
         else if (checked === "latin") {
-            return "Salve ," + grtName
-        }
-        else if(checked == ""){
-            return "";
-        }
-    }
-
-    function chkNames(grtName) {
-        if (namesGreeted[grtName] === undefined) {
-            grtCounter++
-            namesGreeted[grtName] = 0;
-            
-            
-
+            return "Salve, " + grtName
         }
         
-      
+    }
+
+    function setNames(name) {
+        
+
+        if (namesGreeted[name] === undefined) {
+            namesGreeted[name] = 0;
+
+        }
     }
 
     function antiEmpty(par) {
         if (par === "") {
-            alert("please enter your name please");
-             output_div.innerHTML = "please enter your name please"
+            return "please enter your name please in text field eg. 'Sam'"
         }
+        
 
     }
 
     function antiDigit(par) {
         var para = /[0-9]/;
-        if (par.match(para)) {
-            return alert("nums not needed")
+        if (par.match(para)) {            
+            return par;
         }
 
 
     }
 
     function getGreetCtr() {
-        return grtCounter
+       
+        return Object.keys(namesGreeted).length
     }
 
-    function getName(){
-        return grtName
-    }
 
-    function greeted(){
+
+    function greeted() {
+        
         return namesGreeted
     }
 
-  
+   
+    function getGreetKeys(){
+        return Object.keys(namesGreeted)
+    }
+    function showAllGreets(){
+      return  (getGreetCtr() > 0) ? "You have greeted -->: "+Object.keys(namesGreeted):"First enter a name in the text field before hit display the names greeted ";
+    }
+ 
+
+
+
+
     return {
-        setName,
+        setNames,
         action,
-        chkNames,
         getGreetCtr,
-        getName,
         greeted,
         antiEmpty,
-        antiDigit
+        antiDigit,
+        showAllGreets,
+        getGreetKeys
 
     }
 }
