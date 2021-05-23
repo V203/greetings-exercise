@@ -3,7 +3,7 @@
     border-color: slategray;
     border-width: 4px;    
     border-radius: 2px 2px 2px 2px;
-    margin: 20px 20% ;
+    margin: 30px 30px ;
     padding: 2em 2em;
     display: flex;
     flex-flow: row;
@@ -13,7 +13,7 @@
     border-color: slategray;
     border-width: 4px;       
     border-radius: 2px 2px 2px 2px;
-    margin: 20px 20% ;
+    margin: 30px 30px ;
     padding: 2em 2em;
     display: flex;
     flex-flow: row;
@@ -22,7 +22,7 @@
 
 h1,h4{
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
+    /* text-align: center; */
 
 }
 .counter_label{
@@ -39,7 +39,7 @@ h1,h4{
 }
 .enter-name-field{
     margin-top: 19px;
-    height: 20px;
+    height: auto;
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -60,13 +60,14 @@ h1,h4{
     border-color: slategray;
     border-width: 4px;    
     border-radius: 5px 5px 5px 5px;
-    margin:  20px 20% ;
+    margin:  30px 30px ;
     padding: 2em 2em;
 }
 body{
-    box-shadow: 5px 5px 3px 3px lightslategray;
+    box-shadow: 5px 5px 4px 4px lightslategray;
     margin: 2em 1em 2em 1em;
     padding: 1em 1em 1em 1em;
+    border-radius: 19px 19px 19px 19px;
 }
 .center{
     
@@ -79,6 +80,12 @@ body{
 label{
     margin: 1em 1em;
 }
+
+.center-b{
+    display: flex;
+    
+}
+
 
 @media only screen and (max-width :828px){
 .greet-div-top{
@@ -101,6 +108,16 @@ label{
 .center{
     display: flex;
     flex-flow: column;
+}
+
+.center-b{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.span-name{
+    margin-left: auto;
+    margin-right: auto;
 }
     
 }

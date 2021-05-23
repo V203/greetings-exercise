@@ -33,6 +33,7 @@ function grt(existingNames) {
         if (par === "") {
             return "please enter your name please in text field eg. 'Sam'"
         }
+        
 
     }
 
@@ -61,7 +62,9 @@ function grt(existingNames) {
     function getGreetKeys(){
         return Object.keys(namesGreeted)
     }
-
+    function showAllGreets(){
+      return  (getGreetCtr() > 0) ? "You have greeted -->: "+Object.keys(namesGreeted):"First enter a name in the text field before hit display the names greeted ";
+    }
  
 
 
@@ -74,7 +77,7 @@ function grt(existingNames) {
         greeted,
         antiEmpty,
         antiDigit,
-        
+        showAllGreets,
         getGreetKeys
 
     }

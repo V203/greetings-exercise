@@ -53,7 +53,7 @@ clearBtn.addEventListener("click", function () {
 })
 
 lstBtn.addEventListener("click", function () {
-
+    output_div.innerHTML = _grt.showAllGreets();
 })
 
 
