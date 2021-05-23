@@ -6,7 +6,7 @@ function grt(existingNames) {
 
 
     function action(checked,grtName_) {
-        grtName = grtName_.charAt(0).toUpperCase() + grtName_.slice(1);
+      let  grtName = grtName_.charAt(0).toUpperCase() + grtName_.slice(1);
 
         if (checked === "japanese") {
             return "Konnichiwa, " + grtName;
@@ -31,15 +31,15 @@ function grt(existingNames) {
 
     function antiEmpty(par) {
         if (par === "") {
-            output_div.innerHTML = "please enter your name please"
+            return "please enter your name please in text field eg. 'Sam'"
         }
 
     }
 
     function antiDigit(par) {
         var para = /[0-9]/;
-        if (par.match(para)) {
-            return par
+        if (par.match(para)) {            
+            return par;
         }
 
 
@@ -50,19 +50,19 @@ function grt(existingNames) {
         return Object.keys(namesGreeted).length
     }
 
-    // function getName() {
-    //     return grtName
-    // }
+
 
     function greeted() {
-        console.log(namesGreeted + "xcvbnjkl;")
+        
         return namesGreeted
     }
 
-    function cleanName(par_) {
-        
-
+   
+    function getGreetKeys(){
+        return Object.keys(namesGreeted)
     }
+
+ 
 
 
 
@@ -74,7 +74,8 @@ function grt(existingNames) {
         greeted,
         antiEmpty,
         antiDigit,
-        cleanName
+        cleanName,
+        getGreetKeys
 
     }
 }

@@ -34,26 +34,21 @@ greetbtn.addEventListener("click", function () {
             output_div.innerHTML = _grt.action(rdioVal.value, nameFld.value)
 
         }
-    }else{
+    } else {
         output_div.innerHTML = "Please enter your name in the text field."
     }
 
-
     localStorage.setItem("names", JSON.stringify(_grt.greeted()));
 
-
     counter_div.innerHTML = _grt.getGreetCtr()
-    // alert(localStorage["name"])
-
-
 })
 
 clearBtn.addEventListener("click", function () {
-    
+
 
     localStorage.clear()
 
-    
+
     location.reload()
 })
 
