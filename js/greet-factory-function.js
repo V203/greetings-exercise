@@ -74,7 +74,7 @@ function grt(existingNames) {
         greeted,
         antiEmpty,
         antiDigit,
-        cleanName,
+        
         getGreetKeys
 
     }
