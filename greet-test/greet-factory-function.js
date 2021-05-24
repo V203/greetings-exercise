@@ -6,7 +6,7 @@ function grt(existingNames) {
 
 
     function action(checked,grtName_) {
-      let  grtName = grtName_.charAt(0).toUpperCase() + grtName_.slice(1).toLowerCase();
+      let  grtName = grtName_.charAt(0).toUpperCase() + grtName_.slice(1);
 
         if (checked === "japanese") {
             return "Konnichiwa, " + grtName;
@@ -21,10 +21,10 @@ function grt(existingNames) {
     }
 
     function setNames(name) {
-          name_ = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+        
 
-        if (namesGreeted[name_] === undefined) {
-            namesGreeted[name_] = 0;
+        if (namesGreeted[name] === undefined) {
+            namesGreeted[name] = 0;
 
         }
     }
@@ -43,10 +43,6 @@ function grt(existingNames) {
             return par;
         }
 
-
-    }
-    function testChecked(par){
-      return  (par === null) ? "please enter Select a language to proceed":undefined; 
 
     }
 
@@ -69,10 +65,6 @@ function grt(existingNames) {
     function showAllGreets(){
       return  (getGreetCtr() > 0) ? "You have greeted -->: "+Object.keys(namesGreeted):"First enter a name in the text field before hit display the names greeted ";
     }
-
-    function clearError(par){
-        return ""
-    }
  
 
 
@@ -86,9 +78,7 @@ function grt(existingNames) {
         antiEmpty,
         antiDigit,
         showAllGreets,
-        getGreetKeys,
-        testChecked,
-        clearError
+        getGreetKeys
 
     }
 }

@@ -18,6 +18,21 @@
     display: flex;
     flex-flow: row;
 }
+.error_div{
+    display: inline;
+    initial-letter-align: inherit;
+
+    
+    color: red;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: salmon;
+    padding:0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+   
+
+
+}
 
 
 h1,h4{
@@ -62,6 +77,8 @@ h1,h4{
     border-radius: 5px 5px 5px 5px;
     margin:  30px 30px ;
     padding: 2em 2em;
+    text-transform: capitalize;
+    
 }
 body{
     box-shadow: 5px 5px 4px 4px lightslategray;
