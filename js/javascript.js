@@ -1,61 +1,74 @@
-var namesGreeted = {};
-var userName;
-var greetingscounter_div = 0;
-var counter = 0;
-
 var nameFld = document.querySelector(".enter-name-field");
 var counter_div = document.querySelector(".counter_div");
 var greetbtn = document.querySelector(".greetBtn");
 var output_div = document.querySelector(".output_div");
 var clearBtn = document.querySelector(".resetBtn")
+var lstBtn = document.querySelector(".listBtn")
+var error_div = document.querySelector(".error_div")
 
-var _grt = grt();
+
+var namesGreeted;
 
 
 
-if (localStorage["counter"]) {
-    counter = Number(localStorage["counter"])
-    counter_div.innerHTML = counter
+if (localStorage["names"]) {
+    namesGreeted = JSON.parse(localStorage["names"])
+
 }
+var _grt = grt(namesGreeted);
+
+
+counter_div.innerHTML = _grt.getGreetCtr()
 
 greetbtn.addEventListener("click", function () {
-    // _grt.chkNames(nameFld.value)
-    // counter++
-    // localStorage["counter"] = counter
+
+    setTimeout(() => {
+        error_div.innerHTML = _grt.clearError(error_div.innerHTML)        
+    }, 5000); 
+
+     (error_div) =>{error_div.classList.toggle("visibility")};
+    var rdioVal = document.querySelector(".rdio:checked");
     
-    if (namesGreeted[nameFld.value] === undefined) {
-        counter++
-        namesGreeted[nameFld.value] = 0;
-        localStorage["counter"] = counter
+    
+    if (!_grt.antiDigit(nameFld.value)) {
+
+
+        if (nameFld.value === "") {
+            error_div.innerHTML =  "Please enter your name in the textbox field."
+        }
+        else if(rdioVal === null){
+            error_div.innerHTML = _grt.testChecked(rdioVal);
+        }
+         else {
+            _grt.setNames(nameFld.value)
+            output_div.innerHTML = _grt.action(rdioVal.value, nameFld.value)
+
+        }
         
 
+        
+    } else {
+        error_div.innerHTML = "Please enter your name in the text field."
     }
 
-    var rdioVal = document.querySelector(".rdio:checked");
-    _grt.setName(nameFld.value)
+    localStorage.setItem("names", JSON.stringify(_grt.greeted()));
 
-    _grt.antiDigit(nameFld.value)
-    _grt.antiEmpty(nameFld.value);
-
-    // localStorage =_grt.getGreetCtr();
-
-
-    counter_div.innerHTML = localStorage.length;
-    console.log(localStorage.getItem("counter"))
-    output_div.innerHTML = _grt.action(rdioVal.value)
-    counter_div.innerHTML = counter
-    // alert(localStorage["name"])
-
-
+    counter_div.innerHTML = _grt.getGreetCtr()
 })
 
 clearBtn.addEventListener("click", function () {
-    // localStorage.clear()
+
 
     localStorage.clear()
-    counter = 0
-    counter_div.innerHTML = counter
+
+
+    location.reload()
 })
+
+lstBtn.addEventListener("click", function () {
+    output_div.innerHTML = _grt.showAllGreets();
+})
+
 
 
 
