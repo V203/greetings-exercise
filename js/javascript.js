@@ -22,9 +22,11 @@ counter_div.innerHTML = _grt.getGreetCtr()
 
 greetbtn.addEventListener("click", function () {
 
-    error_div.innerHTML = _grt.clearError(error_div.innerHTML)
+    setTimeout(() => {
+        error_div.innerHTML = _grt.clearError(error_div.innerHTML)        
+    }, 5000); 
 
-
+     (error_div) =>{error_div.classList.toggle("visibility")};
     var rdioVal = document.querySelector(".rdio:checked");
     
     
@@ -32,7 +34,7 @@ greetbtn.addEventListener("click", function () {
 
 
         if (nameFld.value === "") {
-            error_div.innerHTML = "Please enter your name in the textbox field."
+            error_div.innerHTML =  "Please enter your name in the textbox field."
         }
         else if(rdioVal === null){
             error_div.innerHTML = _grt.testChecked(rdioVal);

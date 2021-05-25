@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greetings</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/my-grid.css">
+    <link rel="stylesheet" href="./css/simple-grid.css">
 </head>
 
 <body>
@@ -19,32 +21,49 @@
     </div>
 
     <div class="greet-div-top">
-        
-        <div class="center">
-            
-           
-            <span class="span-name">
-                <h4>
-                    Name:
-                </h4>
+        <div class="container">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6">
+                    <div class="error_div">
 
-            </span>
-           
-            <input class="enter-name-field" type="text" name="enter-name" id="" placeholder="Enter your name">
+                    </div>
+                </div>
+                <div class="col-3"></div>
+            </div>
 
-            <div class="counter_lbl">
-                <span class="counter_label">
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+
+            </div>
+
+            <div class="col-4">
+                <span class="span-name">
                     <h4>
-                        counter:
+                        Name:
                     </h4>
-                    <h4 class="counter_div">
-                        0
-                    </h4>
+                    <input class="enter-name-field" type="text" name="enter-name" id="" placeholder="Enter your name">
+
+                    <span class="counter_label">
+                        <h4>
+                            counter:
+                        </h4>
+                        <h4 class="counter_div">
+                            0
+                        </h4>
+                    </span>
                 </span>
-    
+            </div>
+
+            <div class="col-4">
+
             </div>
         </div>
-       
+
+
+
 
 
 
@@ -52,49 +71,81 @@
 
 
 
+
     <div class="radio-greet-btn">
-        <div class="center">
-            <label class="japanese">
-                <input type="radio" name="rdio" value="japanese" class="rdio">
-                <span>Japanese</span>
-            </label>
+    <div class="container">
+        <div class="row">
 
-            <label class="venda">
-                <input type="radio" name="rdio" id="" value="venda" class="rdio">
-                <span>
-                    Venda
-                </span>
-            </label>
+            <div class="col-2-sm">
 
-            <label class="latin">
-                <input type="radio" name="rdio" id="" value="latin" class="rdio">
-                <span>
-                    Latin
-                </span>
-            </label>
-            
-            <div>
-                <div class="greetCtrl">
-                    <button class="greetBtn">
-                        Greet me
-                    </button>
+            </div>
 
-                    <div class="resetBtn">
-                        <button class="reset">
-                            Reset me
-                        </button>
-                    </div>
+            <div class="col-6-sm">
+                
+                    <label class="japanese">
+                        <input type="radio" name="rdio" value="japanese" class="rdio">
+                        <span>Japanese</span>
+                    </label>
 
-                    <div class="listNames">
-                        <button class="listBtn">
-                            Show all
-                        </button>
-                    </div>
-                </div>
+                    <label class="venda">
+                        <input type="radio" name="rdio" id="" value="venda" class="rdio">
+                        <span>
+                            Venda
+                        </span>
+                    </label>
+
+                    <label class="latin">
+                        <input type="radio" name="rdio" id="" value="latin" class="rdio">
+                        <span>
+                            Latin
+                        </span>
+                    </label>
+                
+
+
+            </div>
+
+            <div class="col-2-sm">
 
             </div>
 
         </div>
+    </div>
+        
+            <div class="row">
+                <div class="col-4-sm">
+
+                </div>
+
+                <div class="col-4-sm">
+
+                    <div class="greetCtrl">
+                        <button class="greetBtn">
+                            Greet me
+                        </button>
+
+                        <div class="resetBtn">
+                            <button class="reset">
+                                Reset me
+                            </button>
+                        </div>
+
+                        <div class="listNames">
+                            <button class="listBtn">
+                                Show all
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4-sm">
+
+                </div>
+
+            </div>
+        
+    
+
     </div>
 
     <div class="output_div">
@@ -107,7 +158,7 @@
     <script src="./js/greet-factory-function.js"></script>
     <script src="./js/javascript.js"></script>
     <script src="./greet-test/greet.test.js"></script>
-    
+
 
 </body>
 
