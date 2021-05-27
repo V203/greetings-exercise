@@ -39,14 +39,14 @@ describe("Greetings exercise setting and getting the valuess", function () {
             _grt.setNames("Jake")
             _grt.setNames("Mat")
             _grt.setNames("luke")
-            assert.deepEqual(_grt.greeted(),{ Jake: 0, Mat: 0, luke: 0 } )
+            assert.deepEqual(_grt.greeted(),{ Jake: 0, Mat: 0, Luke: 0 } )
         })
         it("It should the list of all the people greeted eg. blake, sam, james",function(){
-            let _grt = new grt();
+            let _grt = grt();
             _grt.setNames("blake")
             _grt.setNames("sam")
             _grt.setNames("james")
-            assert.equal(_grt.showAllGreets(),'You have greeted -->: blake,sam,james')
+            assert.equal(_grt.showAllGreets(),'You have greeted -->: Blake,Sam,James')
 
 
 

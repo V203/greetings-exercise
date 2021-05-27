@@ -21,7 +21,7 @@ function grt(existingNames) {
     }
 
     function setNames(name) {
-          name_ = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+       let   name_ = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
 
         if (namesGreeted[name_] === undefined) {
             namesGreeted[name_] = 0;
