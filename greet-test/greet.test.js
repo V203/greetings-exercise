@@ -70,16 +70,16 @@ describe("User error detection ", function () {
 
     })
 
-    it("Error message should pop up if the user the clicks the greet button before entering their name in the textfield.", function () {
+    it("Error message should pop up if the user the clicks the greet button before entering their name in the text field.", function () {
         let _grt = grt()
         let str = "";
-        assert.equal(_grt.antiEmpty(str), "Please enter your name in textfield eg. 'Sam', then click the greet button to be greeted.")
+        assert.equal(_grt.antiEmpty(str), "Please enter your name in text field eg. 'Sam', then click the greet button to be greeted.")
     })
 
 
     it("It should return a warning message if user clicks the show all button without greeting A name first.", function () {
         let _grt = new grt();
-        assert.equal(_grt.showAllGreets(), 'Enter names in the textfield and click the show all button to display all the naems you have greeted.')
+        assert.equal(_grt.showAllGreets(), 'Enter names in the text field and click the show all button to display all the naems you have greeted.')
     })
 
 

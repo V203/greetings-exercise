@@ -48,7 +48,7 @@ greetbtn.addEventListener("click", function () {
 
 
         if (nameFld.value === "") {
-            error_div.innerHTML =  "Please enter your name in the textbox field."
+            error_div.innerHTML =  "Please enter your name in the text box field."
         }
         else if(rdioVal === null){
             error_div.innerHTML = _grt.testChecked(rdioVal);

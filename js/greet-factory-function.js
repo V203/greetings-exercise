@@ -31,7 +31,7 @@ function grt(existingNames) {
 
     function antiEmpty(par) {
         if (par === "") {
-            return "Please enter your name in textfield eg.'Sam', then click the greet button to be greeted."
+            return "Please enter your name in text field eg.'Sam', then click the greet button to be greeted."
         }
         
 
@@ -46,7 +46,7 @@ function grt(existingNames) {
 
     }
     function testChecked(par){
-      return  (par === null) ? "Please select a langugae by checking one of the radio buttons below eg 'latin'.":undefined; 
+      return  (par === null) ? "Please select a language by checking one of the radio buttons below eg 'latin'.":undefined; 
 
     }
 
@@ -67,7 +67,7 @@ function grt(existingNames) {
         return Object.keys(namesGreeted)
     }
     function showAllGreets(){
-      return  (getGreetCtr() > 0) ? "You have greeted -->: "+Object.keys(namesGreeted):"Enter names in the textfield and click the show all button to display all the naems you have greeted.";
+      return  (getGreetCtr() > 0) ? "You have greeted -->: "+Object.keys(namesGreeted):"Type A name in the text field and click the show all button to display all the names you have greeted.";
     }
 
     function clearError(par){
