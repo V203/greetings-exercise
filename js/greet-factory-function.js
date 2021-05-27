@@ -31,7 +31,7 @@ function grt(existingNames) {
 
     function antiEmpty(par) {
         if (par === "") {
-            return "please enter your name please in text field eg. 'Sam'"
+            return "Please enter your name in textfield eg. 'Sam', then click the greet button to be greeted."
         }
         
 
@@ -67,7 +67,7 @@ function grt(existingNames) {
         return Object.keys(namesGreeted)
     }
     function showAllGreets(){
-      return  (getGreetCtr() > 0) ? "You have greeted -->: "+Object.keys(namesGreeted):"First enter a name in the text field before hit display the names greeted ";
+      return  (getGreetCtr() > 0) ? "You have greeted -->: "+Object.keys(namesGreeted):"Enter names in the textfield and click the show all button to display all the naems you have greeted.";
     }
 
     function clearError(par){

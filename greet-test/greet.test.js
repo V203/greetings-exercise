@@ -8,27 +8,27 @@ describe("Greetings exercise setting and getting the valuess", function () {
             _grt.setNames("Vuyisa")
             assert.equal(1, _grt.getGreetCtr());
         })
-        it("Should set the same name twice and return return the size of equal to one", function () {
+        it("If same name is set twice the counter should not increase the _grt.getGreetCtr should be equal to 1.", function () {
             let _grt = grt();
             _grt.setNames("Vuyisa")
             _grt.setNames("Vuyisa")
             assert.equal(1, _grt.getGreetCtr());
 
         })
-        it("It should greet Vuyisa in Japanesse", function () {
+        it("It should greet user in the Japanesse language", function () {
             let _grt = grt()
             _grt.setNames("Vuyisa")
             assert.equal(_grt.action("japanese", "Vuyisa"), "Konnichiwa, Vuyisa");
 
         })
-        it("It should greet Vuyisa in Latin", function () {
+        it("It should greet user in the Latin language", function () {
             let _grt = grt()
             _grt.setNames("vuyisa")
             assert.equal(_grt.action("latin", "Vuyisa"), "Salve, Vuyisa");
 
         })
 
-        it("It should greet Vuyisa in venda", function () {
+        it("The user should be greeted in isiVenda language", function () {
             let _grt = grt()
             _grt.setNames("vuyisa")
             assert.equal(_grt.action("venda", "Vuyisa"), "Ndaa, Vuyisa");
@@ -41,7 +41,7 @@ describe("Greetings exercise setting and getting the valuess", function () {
             _grt.setNames("luke")
             assert.deepEqual(_grt.greeted(),{ Jake: 0, Mat: 0, Luke: 0 } )
         })
-        it("It should the list of all the people greeted eg. blake, sam, james",function(){
+        it("It should return the list of all the people greeted eg. blake, sam, james",function(){
             let _grt = grt();
             _grt.setNames("blake")
             _grt.setNames("sam")
@@ -58,23 +58,9 @@ describe("Greetings exercise setting and getting the valuess", function () {
 })
 
 describe("User error detection ", function () {
-    it("Should Warn the user if he/she greet's greets with typing in there name in the textfield", function () {
-        let _grt = grt()
-        let name = "";
-        assert.equal(_grt.antiEmpty(name), "please enter your name please in text field eg. 'Sam'")
-    })
-    it("It should return true if Digits exist in the string name", function () {
-        let _grt = grt();
-        let numAlpha = "hello11"
-        assert.equal(!!_grt.antiDigit(numAlpha),true)
-    })
-    it("It should return false if Digits do not exist in the string name", function () {
-        let _grt = grt();
-        let numAlpha = "hello"
-        assert.equal(!!_grt.antiDigit(numAlpha),false)
-    })
-
-    it("It Should return three names object keys which are 'Sam', 'Samuel', 'Steve'",function(){
+  
+ 
+    it("After greeting Sam ,Samuel and Steve the test should display all the names greeted. ",function(){
         let _grt= grt();
         _grt.setNames("Sam");
         _grt.setNames("Samuel");
@@ -84,25 +70,28 @@ describe("User error detection ", function () {
 
     })
 
-        it("Should Warn the user if string is empty",function(){
+        it("Error message should pop up if the user the clicks the greet button before entering their name in the textfield.",function(){
             let _grt = grt()
             let str="";
-            assert.equal(_grt.antiEmpty(str),"please enter your name please in text field eg. 'Sam'")
+            assert.equal(_grt.antiEmpty(str),"Please enter your name in textfield eg. 'Sam', then click the greet button to be greeted.")
         })
 
-        it("Should true if string is empty",function(){
-            let _grt = grt()
-            let str="";
-            assert.equal(!!_grt.antiEmpty(str),true)
-        })
-        it("Should true if string is not empty",function(){
-            let _grt = grt()
-            let str="Jake";
-            assert.equal(!_grt.antiEmpty(str),true)
-        })
-        it("It should return a warning message if user clicks the show all button with out greet first ",function(){
+      
+        it("It should return a warning message if user clicks the show all button without greeting A name first.",function(){
             let _grt = new grt();
-            assert.equal(_grt.showAllGreets(),'First enter a name in the text field before hit display the names greeted ')
+            assert.equal(_grt.showAllGreets(),'Enter names in the textfield and click the show all button to display all the naems you have greeted.')
         })
+               assert.equal(!!_grt.antiDigit(numAlpha),true)
+    // it("It should return true if Digits exist in the string varible 'numAlpha'.", function () {
+    //     let _grt = grt();
+    //     let numAlpha = "hello11"
+    //     assert.equal(_grt.antiDigit(numAlpha),true)
+    // })
+    it("It should return false if Digits do not exist in the string variable 'numAlpha", function () {
+        let _grt = grt();
+        let numAlpha = "hello"
+        assert.equal(!!_grt.antiDigit(numAlpha),"ue")
+    })
+
 
 })
