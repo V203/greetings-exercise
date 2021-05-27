@@ -31,7 +31,7 @@ function grt(existingNames) {
 
     function antiEmpty(par) {
         if (par === "") {
-            return "Please enter your name in textfield eg. 'Sam', then click the greet button to be greeted."
+            return "Please enter your name in textfield eg.'Sam', then click the greet button to be greeted."
         }
         
 
@@ -46,7 +46,7 @@ function grt(existingNames) {
 
     }
     function testChecked(par){
-      return  (par === null) ? "please enter Select a language to proceed":undefined; 
+      return  (par === null) ? "Please select a langugae by checking one of the radio buttons below eg 'latin'.":undefined; 
 
     }
 

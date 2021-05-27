@@ -19,6 +19,20 @@ var _grt = grt(namesGreeted);
 
 
 counter_div.innerHTML = _grt.getGreetCtr()
+lstBtn.addEventListener("click", function () {
+     
+    if(_grt.getGreetCtr() > 0){
+       output_div.innerHTML = _grt.showAllGreets();
+
+    }
+    else if(_grt.getGreetCtr() <= 0){
+       error_div.innerHTML= _grt.showAllGreets();
+    }
+    setTimeout(() => {
+        error_div.innerHTML = _grt.clearError(error_div.innerHTML)        
+    }, 5000); 
+
+})
 
 greetbtn.addEventListener("click", function () {
 
@@ -65,9 +79,7 @@ clearBtn.addEventListener("click", function () {
     location.reload()
 })
 
-lstBtn.addEventListener("click", function () {
-    output_div.innerHTML = _grt.showAllGreets();
-})
+
 
 
 
