@@ -4,6 +4,7 @@ var greetbtn = document.querySelector(".greetBtn");
 var output_div = document.querySelector(".output_div");
 var clearBtn = document.querySelector(".resetBtn")
 var lstBtn = document.querySelector(".listBtn")
+var error_div = document.querySelector(".error_div")
 
 
 var namesGreeted;
@@ -21,21 +22,33 @@ counter_div.innerHTML = _grt.getGreetCtr()
 
 greetbtn.addEventListener("click", function () {
 
+    setTimeout(() => {
+        error_div.innerHTML = _grt.clearError(error_div.innerHTML)        
+    }, 5000); 
 
-
+     (error_div) =>{error_div.classList.toggle("visibility")};
     var rdioVal = document.querySelector(".rdio:checked");
+    
+    
     if (!_grt.antiDigit(nameFld.value)) {
 
 
         if (nameFld.value === "") {
-            output_div.innerHTML = "Please enter your name in the textbox field."
-        } else {
+            error_div.innerHTML =  "Please enter your name in the textbox field."
+        }
+        else if(rdioVal === null){
+            error_div.innerHTML = _grt.testChecked(rdioVal);
+        }
+         else {
             _grt.setNames(nameFld.value)
             output_div.innerHTML = _grt.action(rdioVal.value, nameFld.value)
 
         }
+        
+
+        
     } else {
-        output_div.innerHTML = "Please enter your name in the text field."
+        error_div.innerHTML = "Please enter your name in the text field."
     }
 
     localStorage.setItem("names", JSON.stringify(_grt.greeted()));
